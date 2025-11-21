@@ -1,20 +1,21 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# PDF Merge V2
 
-# Run and deploy your AI Studio app
+This project is a Vite + React TypeScript app configured to deploy to GitHub Pages.
 
-This contains everything you need to run your app locally.
+## Quick deploy
 
-View your app in AI Studio: https://ai.studio/apps/drive/1KjREtWLiMOkwqVBifFRj6Kjxa20p8iAg
+1. Ensure `gh-pages` is installed (already added as a devDependency).
+2. Set `base` in `vite.config.ts` to `/<REPO_NAME>/` (already set to `/PDF-Merge-V2/`).
+3. Build and publish:
 
-## Run Locally
+```powershell
+npm run deploy
+```
 
-**Prerequisites:**  Node.js
+This runs `npm run build` then `gh-pages -d dist` to publish the `dist` folder.
 
+## Notes
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- If you host under a different repo name, update the `base` path in `vite.config.ts`.
+- If your project uses environment variables (e.g., `GEMINI_API_KEY`), ensure they're available during build-time if needed.
+- If GitHub Pages doesn't show the site immediately, check repository `Settings > Pages` and ensure the `gh-pages` branch is selected.

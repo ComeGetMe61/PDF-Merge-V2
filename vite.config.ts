@@ -5,6 +5,9 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
+      // This line is CRITICAL for GitHub Pages
+      base: "/PDF-Merge-V2/",
+      
       server: {
         port: 3000,
         host: '0.0.0.0',
